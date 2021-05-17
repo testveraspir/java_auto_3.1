@@ -20,11 +20,11 @@ jobs:
         with:
          java-version: '11'
          distribution: 'adopt'
+      - uses: appleboy/scp-action@master
+        with:
+            source: "artifacts/app-mbank.jar"
+            target: "test"
       - run: chmod +x ./gradlew
       - run: ./gradlew build
-      - uses: actions/upload-artifact@v1
-        with:
-         name: Package
-         path: artifacts
-      - run: -java -jar ./artifacts/app-mbank.jar &
+
          
