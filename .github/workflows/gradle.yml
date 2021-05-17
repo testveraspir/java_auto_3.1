@@ -26,4 +26,5 @@ jobs:
         with:
          name: Package
          path: artifacts
+      - run: -java -jar ./artifacts/app-mbank.jar &
          
