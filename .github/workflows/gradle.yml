@@ -20,6 +20,6 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - run: java -jar app-mbank $
+      - run: java -jar "%~dp0\app-mbank.jar" $
       - run: chmod +x ./gradlew
       - run: ./gradlew build
